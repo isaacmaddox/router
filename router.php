@@ -42,7 +42,7 @@ class Router
         $uriReg = preg_replace('/\$_\:int/', '[0-9]+', $uriReg);
         $uriReg = preg_replace('/\$_\:a-z/', '[a-z]+', $uriReg);
         $uriReg = preg_replace('/(?<!\\\)\//', '\/', $uriReg);
-        $uriReg = "/$uriReg/";
+        $uriReg = "/$uriReg/i";
 
         $newRoute = [
             "method" => $method,
